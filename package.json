@@ -1,0 +1,36 @@
+{
+  "name": "alto-web-game",
+  "version": "1.0.0",
+  "description": "Alto web game frontend",
+  "main": "index.js",
+  "author": "Moses Lucas",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "start": "webpack-dev-server --open",
+    "build": "npm run clean && npm run compile",
+    "clean": "rimraf ./build/index.bundle.js",
+    "compile": "NODE_ENV=production webpack --config ./webpack.prod.config.js --progress"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.24.1",
+    "css-loader": "^0.28.9",
+    "node-sass": "^4.7.2",
+    "rimraf": "^2.6.2",
+    "sass-loader": "^6.0.6",
+    "style-loader": "^0.20.1",
+    "webpack": "^3.10.0",
+    "webpack-dev-server": "^2.11.1"
+  },
+  "dependencies": {
+    "bootstrap": "^4.0.0",
+    "material-ui": "^0.20.0",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "react-router": "^4.2.0",
+    "react-router-dom": "^4.2.2"
+  }
+}
